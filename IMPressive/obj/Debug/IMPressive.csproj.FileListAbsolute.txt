@@ -1,0 +1,132 @@
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPressive.exe
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPressive.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\MainWindow.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\MainWindow.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\App.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive_MarkupCompile.cache
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.g.resources
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.Properties.Resources.resources
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.csproj.GenerateResource.Cache
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.exe
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPression.dll
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPression.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\GraphWindow.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\GraphWindow.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\About.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\About.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPressive.exe.manifest
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPressive.application
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.exe.manifest
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive.application
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\Graph3DWindow.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\Graph3DWindow.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\HelixToolkit.Wpf.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\HelixToolkit.Wpf.xml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\IMPressive_MarkupCompile.lref
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\HtmlTextBlock.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\Help.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\Help.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\bin\Debug\IMPressive.exe.config
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\PolarGraphWindow.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\PolarGraphWindow.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\ParamGraphWindow.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\ParamGraphWindow.g.cs
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\PolarParamGraphWindow.baml
+d:\documents\visual studio 2013\Projects\IMPression\IMPressive\obj\Debug\PolarParamGraphWindow.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\GraphComplex3DWindow.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\GraphComplex3DWindow.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.dll
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.dll
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.dll
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.xml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.xml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.xml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\PointsGraphWindow.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\PointsGraphWindow.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\Themes\Windows7.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\Themes\Windows8.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\App.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\Themes\SystemTheme.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\Themes\SystemTheme.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\WPFToolkit.dll
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\bin\Debug\WPFToolkit.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\Outils\CalcPyth.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\Outils\CalcPyth.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\ParamGraph3DWindow.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\InputWnd.g.cs
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\ParamGraph3DWindow.baml
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive\obj\Debug\InputWnd.baml
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPressive.exe.config
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.exe
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPressive.exe.manifest
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPressive.application
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPressive.exe
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPressive.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPression.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\WPFToolkit.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPression.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\HelixToolkit.Wpf.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\HelixToolkit.Wpf.xml
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\HtmlTextBlock.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.xml
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.xml
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.xml
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\System.Windows.Controls.Input.Toolkit.pdb
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\WPFToolkit.pdb
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\PointsGraphWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\PolarParamGraphWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\ParamGraphWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\PolarGraphWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\GraphWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Help.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\MainWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Themes\SystemTheme.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Themes\Windows8.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Themes\Windows7.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\App.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\About.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\ParamGraph3DWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\GraphComplex3DWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Graph3DWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\InputWnd.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Outils\CalcPyth.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\PointsGraphWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\PolarParamGraphWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\ParamGraphWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\PolarGraphWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\GraphWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Help.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\MainWindow.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Themes\SystemTheme.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\App.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\GeneratedInternalTypeHelper.g.cs
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive_MarkupCompile.cache
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive_MarkupCompile.lref
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\About.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\ParamGraph3DWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\GraphComplex3DWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Graph3DWindow.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\InputWnd.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\Outils\CalcPyth.baml
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.g.resources
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.Properties.Resources.resources
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.csproj.GenerateResource.Cache
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.exe.manifest
+D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.application

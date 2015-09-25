@@ -1,0 +1,8 @@
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\bin\Debug\IMPression.Tests.dll
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\bin\Debug\IMPression.Tests.pdb
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\bin\Debug\IMPression.dll
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\bin\Debug\IMPression.pdb
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.csprojResolveAssemblyReference.cache
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.dll
+d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll

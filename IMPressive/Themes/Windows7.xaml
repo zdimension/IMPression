@@ -1,0 +1,1020 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+                    xmlns:themes="clr-namespace:Xceed.Wpf.Toolkit.Themes;assembly=Xceed.Wpf.Toolkit">
+	<LinearGradientBrush x:Key="CheckedBlue" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FF285AB3" Offset="0" />
+		<GradientStop Color="#FF4184EC" Offset="0.5" />
+		<GradientStop Color="#FF558BED" Offset="0.5" />
+		<GradientStop Color="#FF7DACF0" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="CheckedOrange" StartPoint="0,0" EndPoint="0,1">
+		<GradientStop Color="#FFCA6A13" Offset="0" />
+		<GradientStop Color="#FFF67D0C" Offset="0.2" />
+		<GradientStop Color="#FFFE7F0C" Offset="0.2" />
+		<GradientStop Color="#FFFA8E12" Offset="0.5" />
+		<GradientStop Color="#FFFF981D" Offset="0.5" />
+		<GradientStop Color="#FFFCBC5A" Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush x:Key="PanelBackgroundBrush" StartPoint="0,0" EndPoint="0,1">
+		<LinearGradientBrush.GradientStops>
+			<GradientStopCollection>
+				<GradientStop Offset="0" Color="#FFF0F0F0" />
+				<GradientStop Offset="1" Color="#FFE5E5E5" />
+			</GradientStopCollection>
+		</LinearGradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<SolidColorBrush x:Key="PopupDarkBorderBrush" Color="#FFABADB3" />
+	<SolidColorBrush x:Key="CheckedOrangeBorder" Color="#FF8E4A1B" />
+	<xctk:InverseBoolConverter x:Key="InverseBoolConverter" />
+	<SolidColorBrush x:Key="CheckedBlueBorder" Color="#FF143874" />
+	<Style x:Key="OrangeSwitchStyle" TargetType="{x:Type CheckBox}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+		<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type CheckBox}">
+					<ControlTemplate.Resources>
+						<Storyboard x:Key="OnChecking">
+							<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider"
+							                               Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+								<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="112" />
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="OnUnchecking">
+							<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider"
+							                               Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+								<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+					</ControlTemplate.Resources>
+					<DockPanel x:Name="dockPanel">
+						<ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Content="{TemplateBinding Content}"
+						                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+						                  ContentTemplate="{TemplateBinding ContentTemplate}" RecognizesAccessKey="True"
+						                  VerticalAlignment="Center" />
+						<Grid>
+							<Border x:Name="BackgroundBorder" BorderBrush="#FF939393" BorderThickness="1" CornerRadius="2" Height="27"
+							        Width="154">
+								<Border.Background>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFF7FBFF" Offset="0" />
+										<GradientStop Color="#FFECF4F9" Offset="1" />
+										<GradientStop Color="#FFEDF3F7" Offset="0.5" />
+										<GradientStop Color="#FFE7EDF5" Offset="0.5" />
+									</LinearGradientBrush>
+								</Border.Background>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+                                    <TextBlock x:Name="Off" Foreground="#FF7A7A7A" Grid.Column="1" Margin="30,0,0,0" HorizontalAlignment="Center" FontFamily="Cambria Math" FontSize="13"
+									           VerticalAlignment="Center">cos⁻¹(<Run FontStyle="Italic" FontFamily="Times New Roman">x</Run>)</TextBlock>
+                                    <TextBlock x:Name="On" Foreground="#FF7A7A7A" Grid.Column="0" Margin="0,0,30,0" HorizontalAlignment="Center" FontFamily="Cambria Math" FontSize="13"
+									           VerticalAlignment="Center">cos(<Run FontStyle="Italic" FontFamily="Times New Roman">x</Run>)</TextBlock>
+                                </Grid>
+							</Border>
+							<Border BorderBrush="#FF8696AA" HorizontalAlignment="Left" x:Name="slider" Width="50" Height="40"
+							        BorderThickness="1" CornerRadius="2" RenderTransformOrigin="0.5,0.5" Margin="0">
+								<Border.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform ScaleX="1" ScaleY="1" />
+										<SkewTransform AngleX="0" AngleY="0" />
+										<RotateTransform Angle="0" />
+										<TranslateTransform X="0" Y="0" />
+									</TransformGroup>
+								</Border.RenderTransform>
+								<Border.Background>
+
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFF0F6FB" Offset="0" />
+										<GradientStop Color="#FFD7E2EF" Offset="1" />
+										<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+										<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+									</LinearGradientBrush>
+								</Border.Background>
+								<Border x:Name="bg2" BorderThickness="1" BorderBrush="White" CornerRadius="1" />
+							</Border>
+						</Grid>
+					</DockPanel>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Trigger.ExitActions>
+								<BeginStoryboard Storyboard="{StaticResource OnUnchecking}" x:Name="OnUnchecking_BeginStoryboard" />
+							</Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource OnChecking}" x:Name="OnChecking_BeginStoryboard" />
+                            </Trigger.EnterActions>
+                            <Setter TargetName="On" Property="Foreground" Value="White" />
+                            <Setter TargetName="Off" Property="Foreground" Value="White" />
+                            <!-- Change Orange or Blue color here -->
+							<Setter TargetName="BackgroundBorder" Property="Background" Value="{StaticResource CheckedOrange}" />
+							<Setter TargetName="BackgroundBorder" Property="BorderBrush" Value="{StaticResource CheckedOrangeBorder}" />
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<!-- ToDo: Add Style for Isenabled == False -->
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="slider" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="slider" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style x:Key="OrangeSwitchStyle2" TargetType="{x:Type CheckBox}">
+		<Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}" />
+		<Setter Property="Background" Value="{DynamicResource {x:Static SystemColors.WindowBrushKey}}" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type CheckBox}">
+					<ControlTemplate.Resources>
+						<Storyboard x:Key="OnChecking">
+							<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider"
+							                               Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+								<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="97" />
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+						<Storyboard x:Key="OnUnchecking">
+							<DoubleAnimationUsingKeyFrames BeginTime="00:00:00" Storyboard.TargetName="slider"
+							                               Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)">
+								<SplineDoubleKeyFrame KeyTime="00:00:00.1000000" Value="0" />
+							</DoubleAnimationUsingKeyFrames>
+						</Storyboard>
+					</ControlTemplate.Resources>
+					<DockPanel x:Name="dockPanel">
+						<ContentPresenter SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" Content="{TemplateBinding Content}"
+						                  ContentStringFormat="{TemplateBinding ContentStringFormat}"
+						                  ContentTemplate="{TemplateBinding ContentTemplate}" RecognizesAccessKey="True"
+						                  VerticalAlignment="Center" />
+						<Grid>
+							<Border x:Name="BackgroundBorder" BorderBrush="#FF939393" BorderThickness="1" CornerRadius="2" Height="26"
+							        Width="154">
+								<Border.Background>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFF7FBFF" Offset="0" />
+										<GradientStop Color="#FFECF4F9" Offset="1" />
+										<GradientStop Color="#FFEDF3F7" Offset="0.5" />
+										<GradientStop Color="#FFE7EDF5" Offset="0.5" />
+									</LinearGradientBrush>
+								</Border.Background>
+								<Grid>
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition />
+										<ColumnDefinition />
+									</Grid.ColumnDefinitions>
+									<TextBlock x:Name="Off" Foreground="#FF7A7A7A" Grid.Column="1" Margin="10,0,0,0" HorizontalAlignment="Center"
+									           VerticalAlignment="Center" Text="Radians" />
+									<TextBlock x:Name="On" Foreground="#FF7A7A7A" Grid.Column="0" Margin="0,0,15,0" HorizontalAlignment="Center"
+									           VerticalAlignment="Center" Text="Degrés" />
+								</Grid>
+							</Border>
+							<Border BorderBrush="#FF8696AA" HorizontalAlignment="Left" x:Name="slider" Width="65" Height="32"
+							        BorderThickness="1" CornerRadius="2" RenderTransformOrigin="0.5,0.5" Margin="0">
+								<Border.RenderTransform>
+									<TransformGroup>
+										<ScaleTransform ScaleX="1" ScaleY="1" />
+										<SkewTransform AngleX="0" AngleY="0" />
+										<RotateTransform Angle="0" />
+										<TranslateTransform X="0" Y="0" />
+									</TransformGroup>
+								</Border.RenderTransform>
+								<Border.Background>
+
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFF0F6FB" Offset="0" />
+										<GradientStop Color="#FFD7E2EF" Offset="1" />
+										<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+										<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+									</LinearGradientBrush>
+								</Border.Background>
+								<Border x:Name="bg2" BorderThickness="1" BorderBrush="White" CornerRadius="1" />
+							</Border>
+						</Grid>
+					</DockPanel>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsChecked" Value="True">
+							<Trigger.ExitActions>
+								<BeginStoryboard Storyboard="{StaticResource OnUnchecking}" x:Name="OnUnchecking_BeginStoryboard" />
+							</Trigger.ExitActions>
+							<Trigger.EnterActions>
+								<BeginStoryboard Storyboard="{StaticResource OnChecking}" x:Name="OnChecking_BeginStoryboard" />
+							</Trigger.EnterActions>
+							<Setter TargetName="On" Property="Foreground" Value="White" />
+							<Setter TargetName="Off" Property="Foreground" Value="White" />
+							<!-- Change Orange or Blue color here -->
+							<Setter TargetName="BackgroundBorder" Property="Background" Value="{StaticResource CheckedOrange}" />
+							<Setter TargetName="BackgroundBorder" Property="BorderBrush" Value="{StaticResource CheckedOrangeBorder}" />
+						</Trigger>
+						<Trigger Property="IsEnabled" Value="False">
+							<!-- ToDo: Add Style for Isenabled == False -->
+						</Trigger>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="slider" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="slider" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="Button" x:Key="LightButton">
+		<Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFF7FBFF" Offset="0" />
+					<GradientStop Color="#FFECF4F9" Offset="1" />
+					<GradientStop Color="#FFEDF3F7" Offset="0.5" />
+					<GradientStop Color="#FFE7EDF5" Offset="0.5" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="bg" BorderThickness="1" BorderBrush="#FF8696AA" CornerRadius="2"
+					        Background="{TemplateBinding Background}">
+						<Border x:Name="bg2" BorderThickness="1" BorderBrush="White" CornerRadius="1">
+							<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="Button" x:Key="NormalButton">
+		<Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFF0F6FB" Offset="0" />
+					<GradientStop Color="#FFD7E2EF" Offset="1" />
+					<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+					<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="bg" BorderThickness="1" BorderBrush="#FF8696AA" CornerRadius="2"
+					        Background="{TemplateBinding Background}">
+						<Border x:Name="bg2" BorderThickness="1" BorderBrush="White" CornerRadius="1">
+							<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+
+	</Style>
+    <Style TargetType="xctk:ButtonChrome" x:Key="TransparentButtonChrome">
+        <Setter Property="Foreground" Value="#FF1E395B" />
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type xctk:ButtonChrome}">
+                    <Border x:Name="bg" BorderThickness="1" BorderBrush="#FF8696AA" CornerRadius="2"
+					        Background="{TemplateBinding Background}">
+                        <Border x:Name="bg2" BorderThickness="1" BorderBrush="White" CornerRadius="1">
+                            <ContentPresenter VerticalAlignment="Center" />
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFfff4e9" Offset="0" />
+                                        <GradientStop Color="#FFfff3a0" Offset="1" />
+                                        <GradientStop Color="#FFfee2c2" Offset="0.5" />
+                                        <GradientStop Color="#FFffcf6a" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+                            <Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFeecb8e" Offset="0" />
+                                        <GradientStop Color="#FFf3e37b" Offset="1" />
+                                        <GradientStop Color="#FFf5c779" Offset="0.5" />
+                                        <GradientStop Color="#FFf5bb57" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+                            <Setter Property="BorderBrush" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFeecb8e" Offset="0" />
+                                        <GradientStop Color="#FFf3e37b" Offset="1" />
+                                        <GradientStop Color="#FFf5c779" Offset="0.5" />
+                                        <GradientStop Color="#FFf5bb57" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    <Style TargetType="xctk:ButtonChrome" x:Key="TransparentButtonChromeLeft">
+        <Setter Property="Foreground" Value="#FF1E395B" />
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type xctk:ButtonChrome}">
+                    <Border x:Name="bg" BorderThickness="1,1,0,1" BorderBrush="#FF8696AA" CornerRadius="2,0,0,2"
+					        Background="{TemplateBinding Background}">
+                        <Border x:Name="bg2" BorderThickness="1,1,0,1" BorderBrush="White" CornerRadius="1,0,0,1">
+                            <ContentPresenter VerticalAlignment="Center" />
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFfff4e9" Offset="0" />
+                                        <GradientStop Color="#FFfff3a0" Offset="1" />
+                                        <GradientStop Color="#FFfee2c2" Offset="0.5" />
+                                        <GradientStop Color="#FFffcf6a" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+                            <Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFeecb8e" Offset="0" />
+                                        <GradientStop Color="#FFf3e37b" Offset="1" />
+                                        <GradientStop Color="#FFf5c779" Offset="0.5" />
+                                        <GradientStop Color="#FFf5bb57" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+                            <Setter Property="BorderBrush" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFeecb8e" Offset="0" />
+                                        <GradientStop Color="#FFf3e37b" Offset="1" />
+                                        <GradientStop Color="#FFf5c779" Offset="0.5" />
+                                        <GradientStop Color="#FFf5bb57" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    <Style TargetType="xctk:ButtonChrome" x:Key="TransparentButtonChromeRight">
+        <Setter Property="Foreground" Value="#FF1E395B" />
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type xctk:ButtonChrome}">
+                    <Border x:Name="bg" BorderThickness="0,1,1,1" BorderBrush="#FF8696AA" CornerRadius="0,2,2,0"
+					        Background="{TemplateBinding Background}">
+                        <Border x:Name="bg2" BorderThickness="0,1,1,1" BorderBrush="White" CornerRadius="0,1,1,0">
+                            <ContentPresenter VerticalAlignment="Center" />
+                        </Border>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Background" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFfff4e9" Offset="0" />
+                                        <GradientStop Color="#FFfff3a0" Offset="1" />
+                                        <GradientStop Color="#FFfee2c2" Offset="0.5" />
+                                        <GradientStop Color="#FFffcf6a" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+                            <Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFeecb8e" Offset="0" />
+                                        <GradientStop Color="#FFf3e37b" Offset="1" />
+                                        <GradientStop Color="#FFf5c779" Offset="0.5" />
+                                        <GradientStop Color="#FFf5bb57" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                            <Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+                            <Setter Property="BorderBrush" TargetName="bg2">
+                                <Setter.Value>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFeecb8e" Offset="0" />
+                                        <GradientStop Color="#FFf3e37b" Offset="1" />
+                                        <GradientStop Color="#FFf5c779" Offset="0.5" />
+                                        <GradientStop Color="#FFf5bb57" Offset="0.5" />
+                                    </LinearGradientBrush>
+                                </Setter.Value>
+                            </Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+
+    </Style>
+    <Style TargetType="Button" x:Key="ButtonNoBorder">
+		<Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFF0F6FB" Offset="0" />
+					<GradientStop Color="#FFD7E2EF" Offset="1" />
+					<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+					<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type xctk:ButtonChrome}">
+					<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+					<ControlTemplate.Triggers>
+						<Trigger Property="RenderMouseOver" Value="True">
+							<Setter Property="Background">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger Property="RenderPressed" Value="True">
+							<Setter Property="Background">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="xctk:SplitButton" x:Key="NormalSplitButton">
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Template">
+			<Setter.Value>
+                <ControlTemplate TargetType="{x:Type xctk:SplitButton}" >
+                    <Grid x:Name="MainGrid" SnapsToDevicePixels="True" Background="{x:Null}">
+                        <xctk:ButtonChrome x:Name="ControlChrome" Background="{x:Null}"
+							                   RenderEnabled="{TemplateBinding IsEnabled}">
+                            <Grid Background="{x:Null}">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <Button x:Name="PART_ActionButton" Margin="0" BorderBrush="{x:Null}"
+									        HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+									        VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+									        Padding="{TemplateBinding Padding}" Background="{x:Null}">
+                                    <Button.Template>
+                                        <ControlTemplate TargetType="Button">
+                                            <ContentPresenter />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                    <Grid Background="{x:Null}">
+                                        <xctk:ButtonChrome x:Name="ActionButtonChrome"
+											                   Foreground="{TemplateBinding Foreground}"
+											                   BorderThickness="1,1,0,1"
+											                   BorderBrush="White"
+											                   CornerRadius="1,0,0,1"
+											                   RenderEnabled="{TemplateBinding IsEnabled}"
+											                   RenderMouseOver="{Binding IsMouseOver, ElementName=PART_ActionButton}"
+											                   RenderPressed="{Binding IsPressed, ElementName=PART_ActionButton}"
+                                                           Style="{StaticResource TransparentButtonChromeLeft}">
+                                            <ContentPresenter Name="ActionButtonContent" Margin="{TemplateBinding Padding}"
+												                  Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}"
+												                  VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+												                  HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+												                  RecognizesAccessKey="true" />
+                                        </xctk:ButtonChrome>
+                                    </Grid>
+                                </Button>
+                                <ToggleButton x:Name="PART_ToggleButton"
+									              Grid.Column="1"
+									              IsTabStop="False"
+									              IsChecked="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+									              IsHitTestVisible="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InverseBoolConverter}}">
+                                    <ToggleButton.Template>
+                                        <ControlTemplate TargetType="ToggleButton">
+                                            <ContentPresenter />
+                                        </ControlTemplate>
+                                    </ToggleButton.Template>
+                                    <Grid>
+                                        <xctk:ButtonChrome x:Name="ToggleButtonChrome"
+											                   Background="{TemplateBinding Background}"
+                                                           Style="{StaticResource TransparentButtonChromeRight}"
+											                   BorderThickness="0,1,1,1"
+											                   Padding="1,0,1,0"
+											                   CornerRadius="0,1,1,0"
+											                   RenderChecked="{TemplateBinding IsOpen}"
+											                   RenderEnabled="{TemplateBinding IsEnabled}"
+											                   RenderMouseOver="{Binding IsMouseOver, ElementName=PART_ToggleButton}"
+											                   RenderPressed="{Binding IsPressed, ElementName=PART_ToggleButton}"
+                                                           >
+                                            <Grid x:Name="arrowGlyph" IsHitTestVisible="False" Margin="4,3,4,3">
+                                                <Path x:Name="Arrow" Width="7" Height="4"
+													      Data="M 0,1 C0,1 0,0 0,0 0,0 3,0 3,0 3,0 3,1 3,1 3,1 4,1 4,1 4,1 4,0 4,0 4,0 7,0 7,0 7,0 7,1 7,1 7,1 6,1 6,1 6,1 6,2 6,2 6,2 5,2 5,2 5,2 5,3 5,3 5,3 4,3 4,3 4,3 4,4 4,4 4,4 3,4 3,4 3,4 3,3 3,3 3,3 2,3 2,3 2,3 2,2 2,2 2,2 1,2 1,2 1,2 1,1 1,1 1,1 0,1 0,1 z"
+													      Fill="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+                                            </Grid>
+                                        </xctk:ButtonChrome>
+                                    </Grid>
+                                </ToggleButton>
+                            </Grid>
+                        </xctk:ButtonChrome>
+
+                        <Popup x:Name="PART_Popup"
+							       HorizontalOffset="1"
+							       VerticalOffset="1"
+							       AllowsTransparency="True"
+							       StaysOpen="False"
+							       Placement="Bottom"
+							       Focusable="False"
+							       IsOpen="{Binding IsChecked, ElementName=PART_ToggleButton}">
+                            <Border BorderThickness="1" Background="{x:Null}" BorderBrush="{x:Null}">
+                                <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding DropDownContent}" />
+                            </Border>
+                        </Popup>
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+						<Trigger Property="IsEnabled" Value="False">
+							<Setter Property="Fill" TargetName="Arrow" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+							<Setter TargetName="ActionButtonChrome" Property="Foreground"
+							        Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+						</Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="BorderBrush" Value="#ffffefcc" />
+							<Setter Property="BorderBrush" TargetName="ActionButtonChrome" Value="#ffffefcc" />
+							<Setter Property="BorderBrush" TargetName="ToggleButtonChrome" Value="#ffffefcc" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="xctk:DropDownButton" x:Key="NormalDropButton">
+        <Setter Property="BorderThickness" Value="1" />
+        <Setter Property="IsTabStop" Value="False" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Padding" Value="3" />
+        <Setter Property="Background" Value="{x:Null}" />
+        <Setter Property="BorderBrush" Value="White" />
+        <Setter Property="Foreground" Value="#FF1E395B" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type xctk:DropDownButton}">
+                    <Grid x:Name="MainGrid" SnapsToDevicePixels="True">
+                            <ToggleButton x:Name="PART_DropDownButton"
+                                Grid.Column="1"
+                                IsChecked="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                                IsHitTestVisible="{Binding IsOpen, RelativeSource={RelativeSource TemplatedParent}, Converter={StaticResource InverseBoolConverter}}"
+                                >
+                                <ToggleButton.Template>
+                                <ControlTemplate TargetType="ToggleButton">
+                                    <ContentPresenter />
+                                </ControlTemplate>
+                            </ToggleButton.Template>
+                            <Grid>
+                                <xctk:ButtonChrome x:Name="ToggleButtonChrome"
+                                                     Style="{StaticResource TransparentButtonChrome}"
+                                                     Foreground="{TemplateBinding Foreground}"
+                                                     BorderThickness="{TemplateBinding BorderThickness}"
+                                                     BorderBrush="{TemplateBinding BorderBrush}"
+                                                     RenderChecked="{TemplateBinding IsOpen}"
+                                                     RenderEnabled="{TemplateBinding IsEnabled}"
+											         RenderMouseOver="{Binding IsMouseOver, ElementName=PART_DropDownButton}"
+											         RenderPressed="{Binding IsPressed, ElementName=PART_DropDownButton}">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*" />
+                                            <ColumnDefinition Width="Auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <ContentPresenter Margin="{TemplateBinding Padding}" Content="{TemplateBinding Content}" ContentTemplate="{TemplateBinding ContentTemplate}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="true" />
+                                        <Grid x:Name="arrowGlyph" IsHitTestVisible="False" Margin="4,3,4,3" Grid.Column="1">
+                                            <Path x:Name="Arrow"  Width="7" Height="4" Data="M 0,1 C0,1 0,0 0,0 0,0 3,0 3,0 3,0 3,1 3,1 3,1 4,1 4,1 4,1 4,0 4,0 4,0 7,0 7,0 7,0 7,1 7,1 7,1 6,1 6,1 6,1 6,2 6,2 6,2 5,2 5,2 5,2 5,3 5,3 5,3 4,3 4,3 4,3 4,4 4,4 4,4 3,4 3,4 3,4 3,3 3,3 3,3 2,3 2,3 2,3 2,2 2,2 2,2 1,2 1,2 1,2 1,1 1,1 1,1 0,1 0,1 z" Fill="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}" />
+                                        </Grid>
+                                    </Grid>
+                                </xctk:ButtonChrome>
+                            </Grid>
+                        </ToggleButton>
+
+                        <Popup x:Name="PART_Popup" 
+                         HorizontalOffset="1"
+                         VerticalOffset="1"
+                         AllowsTransparency="True"
+                         StaysOpen="False"
+                         Placement="Bottom"
+                         Focusable="False"
+                         IsOpen="{Binding IsChecked, ElementName=PART_DropDownButton}">
+                            <Border BorderThickness="0" Background="{StaticResource PanelBackgroundBrush}" BorderBrush="{StaticResource PopupDarkBorderBrush}">
+                                <ContentPresenter x:Name="PART_ContentPresenter" Content="{TemplateBinding DropDownContent}" />
+                            </Border>
+                        </Popup>
+
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Fill" TargetName="Arrow" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                            <Setter TargetName="ToggleButtonChrome" Property="Foreground" Value="{DynamicResource {x:Static SystemColors.GrayTextBrushKey}}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+	<Style TargetType="Button" x:Key="NormalButtonMenuTop">
+		<Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFF0F6FB" Offset="0" />
+					<GradientStop Color="#FFD7E2EF" Offset="1" />
+					<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+					<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="bg" BorderThickness="1,1,1,1" BorderBrush="#FF8696AA" CornerRadius="2,2,0,0"
+					        Background="{TemplateBinding Background}">
+						<Border x:Name="bg2" BorderThickness="1,1,1,1" BorderBrush="White" CornerRadius="1,1,0,0">
+							<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="Button" x:Key="NormalButtonMenu">
+		<Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFF0F6FB" Offset="0" />
+					<GradientStop Color="#FFD7E2EF" Offset="1" />
+					<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+					<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="bg" BorderThickness="1,0,1,1" BorderBrush="#FF8696AA" CornerRadius="0"
+					        Background="{TemplateBinding Background}">
+						<Border x:Name="bg2" BorderThickness="1,1,1,1" BorderBrush="White" CornerRadius="0">
+							<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style TargetType="Button" x:Key="NormalButtonMenuBottom">
+		<Setter Property="Foreground" Value="#FF1E395B" />
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFF0F6FB" Offset="0" />
+					<GradientStop Color="#FFD7E2EF" Offset="1" />
+					<GradientStop Color="#FFE2EAF3" Offset="0.5" />
+					<GradientStop Color="#FFD5E0ED" Offset="0.5" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="{x:Type Button}">
+					<Border x:Name="bg" BorderThickness="1,0,1,1" BorderBrush="#FF8696AA" CornerRadius="0,0,2,2"
+					        Background="{TemplateBinding Background}">
+						<Border x:Name="bg2" BorderThickness="1,1,1,1" BorderBrush="White" CornerRadius="0,0,1,1">
+							<ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger Property="IsMouseOver" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFfff4e9" Offset="0" />
+										<GradientStop Color="#FFfff3a0" Offset="1" />
+										<GradientStop Color="#FFfee2c2" Offset="0.5" />
+										<GradientStop Color="#FFffcf6a" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffffdb00" />
+							<Setter Property="BorderBrush" TargetName="bg2" Value="#ffffefcc" />
+						</Trigger>
+						<Trigger Property="IsPressed" Value="True">
+							<Setter Property="Background" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+							<Setter Property="BorderBrush" TargetName="bg" Value="#ffc29b29" />
+							<Setter Property="BorderBrush" TargetName="bg2">
+								<Setter.Value>
+									<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+										<GradientStop Color="#FFeecb8e" Offset="0" />
+										<GradientStop Color="#FFf3e37b" Offset="1" />
+										<GradientStop Color="#FFf5c779" Offset="0.5" />
+										<GradientStop Color="#FFf5bb57" Offset="0.5" />
+									</LinearGradientBrush>
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+
+	<Style TargetType="Grid" x:Key="MainGrid">
+		<Setter Property="Background">
+			<Setter.Value>
+				<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+					<GradientStop Color="#FFEDF4FC" Offset="0" />
+					<GradientStop Color="#FFD9E4F1" Offset="1" />
+				</LinearGradientBrush>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

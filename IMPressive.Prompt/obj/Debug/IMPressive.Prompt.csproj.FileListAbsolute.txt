@@ -1,0 +1,8 @@
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\bin\Debug\IMPressive.Prompt.exe.config
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\bin\Debug\IMPressive.Prompt.exe
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\bin\Debug\IMPressive.Prompt.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\bin\Debug\IMPression.dll
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\bin\Debug\IMPression.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.exe
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.pdb

@@ -1,0 +1,15 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:Custom="http://www.quickzip.org/BaseControls" x:Class="IMPressive.Help"
+	Title="Aide" Height="400" Width="626" ResizeMode="CanMinimize" Icon="icon.ico">
+    <Grid Style="{DynamicResource MainGrid}">
+        <ComboBox x:Name="cbxFunc" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="600"
+		          SelectionChanged="cbxFunc_SelectionChanged" />
+
+		<Custom:HtmlTextBlock x:Name="lblHelp" HorizontalAlignment="Left" Margin="10,37,0,0" TextWrapping="Wrap"
+		                      VerticalAlignment="Top" Html="[i]Sélectionnez une fonction pour voir l'aide.[/i]" Height="324"
+		                      Width="600" FontSize="16" TextTrimming="WordEllipsis" />
+
+	</Grid>
+</Window>

@@ -1,0 +1,33 @@
+﻿<Window x:Class="IMPressive.About"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:Properties="clr-namespace:IMPressive.Properties"
+		Title="À propos de IMP" Height="311" Width="462" ResizeMode="NoResize" Icon="icon.ico"
+		WindowStartupLocation="CenterOwner">
+    <Grid Style="{DynamicResource MainGrid}">
+        <Button x:Name="btnOK" Style="{DynamicResource NormalButton}" Content="OK" HorizontalAlignment="Left"
+				Margin="406,232,0,0" VerticalAlignment="Top" Width="40" Height="40" BorderBrush="#FF8696AA" FontSize="16"
+				Foreground="#FF1E395B" Click="btnOK_Click" />
+		<Image Margin="10,10,318,144" Source="128.png" Stretch="Fill" />
+		<TextBlock HorizontalAlignment="Left" Margin="153,10,0,0" TextWrapping="Wrap"
+				   Text="IMP (Impressive Math Parser) est un interpréteur mathématique développé en C# par Tom Niget."
+				   VerticalAlignment="Top" />
+		<TextBlock x:Name="lblLst" HorizontalAlignment="Left" Margin="153,122,0,0" TextWrapping="Wrap"
+				   Text="Liste des fonctions (déplacez le pointeur au-dessus)" VerticalAlignment="Top" />
+		<TextBlock x:Name="lblConst" HorizontalAlignment="Left" Margin="153,102,0,0" TextWrapping="Wrap"
+				   Text="Liste des constantes (déplacez le pointeur au-dessus)" VerticalAlignment="Top" />
+		<TextBlock HorizontalAlignment="Left" Height="72" Margin="10,96,0,0" TextWrapping="Wrap" Text="3.0"
+				   VerticalAlignment="Top" Width="128" Background="{x:Null}" FontSize="36" FontWeight="Bold"
+				   Foreground="#FFD9E4F1" TextAlignment="Center" />
+		<TextBlock x:Name="lblNbFunc" HorizontalAlignment="Left" Margin="153,154,0,0" TextWrapping="Wrap"
+				   Text="Il y a actuellement ... fonctions." VerticalAlignment="Top" />
+		<ComboBox x:Name="cbxTheme" HorizontalAlignment="Left" Margin="57,250,0,0" VerticalAlignment="Top" Width="151"
+				  SelectionChanged="cbxTheme_SelectionChanged">
+			<ComboBoxItem Content="Windows 7" />
+			<ComboBoxItem Content="Windows 8 (pas fini)" />
+			<ComboBoxItem Content="Système" />
+		</ComboBox>
+		<TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,253,0,0" TextWrapping="Wrap" Text="Thème :"
+				   VerticalAlignment="Top" />
+	</Grid>
+</Window>

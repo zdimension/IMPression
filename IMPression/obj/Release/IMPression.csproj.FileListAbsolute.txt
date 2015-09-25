@@ -1,0 +1,5 @@
+d:\documents\visual studio 2013\Projects\IMPression\IMPression\bin\Release\IMPression.dll
+d:\documents\visual studio 2013\Projects\IMPression\IMPression\bin\Release\IMPression.pdb
+d:\documents\visual studio 2013\Projects\IMPression\IMPression\obj\Release\IMPression.csprojResolveAssemblyReference.cache
+d:\documents\visual studio 2013\Projects\IMPression\IMPression\obj\Release\IMPression.dll
+d:\documents\visual studio 2013\Projects\IMPression\IMPression\obj\Release\IMPression.pdb

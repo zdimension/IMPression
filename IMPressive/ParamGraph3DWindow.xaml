@@ -1,0 +1,150 @@
+﻿<Window
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
+	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" xmlns:h="http://helix-toolkit.org/wpf"
+	xmlns:wpf="clr-namespace:HelixToolkit.Wpf"
+	xmlns:imPressive="clr-namespace:IMPressive" x:Name="paramGraph3DWindow"
+	x:Class="IMPressive.ParamGraph3DWindow"
+	Height="500" Width="725" Loaded="Window_Loaded" Icon="icon.ico" WindowStartupLocation="CenterOwner"
+	DataContext="{Binding ElementName=paramGraph3DWindow}">
+    <Grid Style="{DynamicResource MainGrid}">
+        <Grid Margin="0,52,0,40" Background="White">
+			<h:HelixViewport3D x:Name="mainViewport" Margin="0" ShowCoordinateSystem="True" CameraRotationMode="Turntable"
+							   ModelUpDirection="0,0,1" BorderBrush="Black">
+				<h:HelixViewport3D.Camera>
+					<PerspectiveCamera x:Name="camera" Position="5, 30, 40" LookDirection="-5, -30, -40" FieldOfView="45"
+									   UpDirection="0,0,1" />
+				</h:HelixViewport3D.Camera>
+
+				<h:CoordinateSystemVisual3D ArrowLengths="5" />
+				<!--<h:GridLinesVisual3D Normal="0,0,1" LengthDirection="1,0,0"/>-->
+				<ModelVisual3D Content="{Binding Lights}" />
+				<imPressive:SurfacePlotVisual3D x:Name="model3D" Points="{Binding Data}" ColorValues="{Binding ColorValues}"
+												SurfaceBrush="{Binding SurfaceBrush}" />
+			</h:HelixViewport3D>
+		</Grid>
+		<Button x:Name="btnLoad" Content="OK" HorizontalAlignment="Right" Margin="0,10,85,0" VerticalAlignment="Top"
+				Width="76" BorderBrush="#FF8696AA" Style="{DynamicResource NormalButton}" Height="26" Click="btnLoad_Click"
+				HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Foreground="#FF1E395B" />
+		<Grid Margin="10,10,166,0" Height="26" VerticalAlignment="Top">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="Auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+				<Label x:Name="label" Content="X :" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0"/>
+				<Border BorderThickness="1" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
+					SnapsToDevicePixels="False" VerticalAlignment="Top" Grid.Column="1">
+					<controls:AutoCompleteBox x:Name="txtX" Height="24" Margin="-5" VerticalAlignment="Top"
+						FontFamily="Cambria Math" FontSize="18" Foreground="#FF333333" Padding="0,2,3,0"
+						BorderBrush="{x:Null}" BorderThickness="0" Text=""
+						HorizontalContentAlignment="Stretch">
+						<controls:AutoCompleteBox.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FFE5EEFB" Offset="0" />
+								<GradientStop Color="White" Offset="1" />
+							</LinearGradientBrush>
+						</controls:AutoCompleteBox.Background>
+					</controls:AutoCompleteBox>
+				</Border>
+		
+				<Label x:Name="label1" Content="Y :" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="2"/>
+				<Border BorderThickness="1" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
+					SnapsToDevicePixels="False" VerticalAlignment="Top" Grid.Column="3">
+					<controls:AutoCompleteBox x:Name="txtY" Height="24" Margin="-5" VerticalAlignment="Top"
+						FontFamily="Cambria Math" FontSize="18" Foreground="#FF333333" Padding="0,2,3,0"
+						BorderBrush="{x:Null}" BorderThickness="0" Text=""
+						HorizontalContentAlignment="Stretch">
+						<controls:AutoCompleteBox.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FFE5EEFB" Offset="0" />
+								<GradientStop Color="White" Offset="1" />
+							</LinearGradientBrush>
+						</controls:AutoCompleteBox.Background>
+					</controls:AutoCompleteBox>
+				</Border>
+		
+				<Label x:Name="label2" Content="Z :" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="4"/>
+				<Border BorderThickness="1" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
+					SnapsToDevicePixels="False" VerticalAlignment="Top" Grid.Column="5">
+					<controls:AutoCompleteBox x:Name="txtZ" Height="24" Margin="-5" VerticalAlignment="Top"
+						FontFamily="Cambria Math" FontSize="18" Foreground="#FF333333" Padding="0,2,3,0"
+						BorderBrush="{x:Null}" BorderThickness="0" Text=""
+						HorizontalContentAlignment="Stretch">
+						<controls:AutoCompleteBox.Background>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="#FFE5EEFB" Offset="0" />
+								<GradientStop Color="White" Offset="1" />
+							</LinearGradientBrush>
+						</controls:AutoCompleteBox.Background>
+					</controls:AutoCompleteBox>
+				</Border>
+			
+		</Grid>
+		<Button x:Name="btnClear" Content="Effacer" HorizontalAlignment="Right" Margin="0,10,4,0" VerticalAlignment="Top"
+				Width="76" BorderBrush="#FF8696AA" Style="{DynamicResource NormalButton}" Height="26"
+				HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Click="btnClear_Click"
+				Foreground="#FF1E395B" />
+		<Grid Margin="0,429,5,0" VerticalAlignment="Center" Height="26">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+				<ColumnDefinition Width="Auto"/>
+				<ColumnDefinition Width="*"/>
+			</Grid.ColumnDefinitions>
+			<Label x:Name="label3" Content="Pour t de" HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Column="0" Height="26" Width="58"/>
+			<Border BorderThickness="1" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
+				SnapsToDevicePixels="False" VerticalAlignment="Top" Grid.Column="1">
+				<controls:AutoCompleteBox x:Name="txtFromT" Height="24" Margin="-5" VerticalAlignment="Top"
+					FontFamily="Cambria Math" FontSize="18" Foreground="#FF333333" Padding="0,2,3,0"
+					BorderBrush="{x:Null}" BorderThickness="0" Text=""
+					HorizontalContentAlignment="Stretch">
+					<controls:AutoCompleteBox.Background>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FFE5EEFB" Offset="0" />
+							<GradientStop Color="White" Offset="1" />
+						</LinearGradientBrush>
+					</controls:AutoCompleteBox.Background>
+				</controls:AutoCompleteBox>
+			</Border>
+			<Label x:Name="label4" Content="à" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26"/>
+			<Border BorderThickness="1" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
+				SnapsToDevicePixels="False" VerticalAlignment="Top" Grid.Column="3">
+				<controls:AutoCompleteBox x:Name="txtToT" Height="24" Margin="-5" VerticalAlignment="Top"
+					FontFamily="Cambria Math" FontSize="18" Foreground="#FF333333" Padding="0,2,3,0"
+					BorderBrush="{x:Null}" BorderThickness="0" Text=""
+					HorizontalContentAlignment="Stretch">
+					<controls:AutoCompleteBox.Background>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FFE5EEFB" Offset="0" />
+							<GradientStop Color="White" Offset="1" />
+						</LinearGradientBrush>
+					</controls:AutoCompleteBox.Background>
+				</controls:AutoCompleteBox>
+			</Border>
+
+			<Label x:Name="label5" Content="pas :" Grid.Column="4" HorizontalAlignment="Left" VerticalAlignment="Top" Height="26"/>
+			<Border BorderThickness="1" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
+				SnapsToDevicePixels="False" VerticalAlignment="Top" Grid.Column="5">
+				<controls:AutoCompleteBox x:Name="txtPasT" Height="24" Margin="-5" VerticalAlignment="Top"
+					FontFamily="Cambria Math" FontSize="18" Foreground="#FF333333" Padding="0,2,3,0"
+					BorderBrush="{x:Null}" BorderThickness="0" Text=""
+					HorizontalContentAlignment="Stretch">
+					<controls:AutoCompleteBox.Background>
+						<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+							<GradientStop Color="#FFE5EEFB" Offset="0" />
+							<GradientStop Color="White" Offset="1" />
+						</LinearGradientBrush>
+					</controls:AutoCompleteBox.Background>
+				</controls:AutoCompleteBox>
+			</Border>
+		</Grid>
+	</Grid>
+</Window>

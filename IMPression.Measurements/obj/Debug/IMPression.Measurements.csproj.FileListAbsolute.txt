@@ -1,0 +1,8 @@
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\bin\Debug\IMPression.Measurements.exe.config
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\bin\Debug\IMPression.Measurements.exe
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\bin\Debug\IMPression.Measurements.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\bin\Debug\IMPression.dll
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\bin\Debug\IMPression.pdb
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.csprojResolveAssemblyReference.cache
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.exe
+D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.pdb
