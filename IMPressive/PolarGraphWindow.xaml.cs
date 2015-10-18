@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using IMPression;
+using IMPression.Parser;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
@@ -91,8 +92,8 @@ namespace IMPressive
             txtOperation.Text = parser.CleanUp(txtOperation.Text);
             try
             {
-                GraphModel.Series.Add(new FunctionSeries(x => F(x) * MathFunctions.Cos(x),
-                    y => F(y) * MathFunctions.Sin(y), parser.Calculate(txtFromT.Text), parser.Calculate(txtToT.Text),
+                GraphModel.Series.Add(new FunctionSeries(x => F(x) * Functions.Cos(x),
+                    y => F(y) * Functions.Sin(y), parser.Calculate(txtFromT.Text), parser.Calculate(txtToT.Text),
                     parser.Calculate(txtPasT.Text), txtOperation.Text));
                 chartCanvas.InvalidatePlot();
             }

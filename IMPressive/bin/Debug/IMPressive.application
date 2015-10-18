@@ -11,17 +11,17 @@
     <deploymentProvider codebase="https://imp.codeplex.com/releases/clickonce/IMPressive.application" />
   </deployment>
   <compatibleFrameworks xmlns="urn:schemas-microsoft-com:clickonce.v2">
-    <framework targetVersion="4.0" profile="Full" supportedRuntime="4.0.30319" />
+    <framework targetVersion="4.5" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="IMPressive.exe.manifest" size="9890">
+    <dependentAssembly dependencyType="install" codebase="IMPressive.exe.manifest" size="10758">
       <assemblyIdentity name="IMPressive.exe" version="3.0.0.0" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>WfB3ZqXGhNqLOAnchBnQpo20oBc=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>zv9Bn1EY7aSn09ZAD9VDXaFr7wdaux2kUT0/gnzF8+s=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -49,8 +49,12 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IMPression\IMPression.csproj">
+    <ProjectReference Include="..\IMPression.Parser\IMPression.Parser.csproj">
       <Project>{acdf942d-7aec-4860-b6d5-3de417688417}</Project>
+      <Name>IMPression.Parser</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\IMPression\IMPression.csproj">
+      <Project>{30feb247-2f1f-437c-84e7-d35d6439735a}</Project>
       <Name>IMPression</Name>
     </ProjectReference>
   </ItemGroup>

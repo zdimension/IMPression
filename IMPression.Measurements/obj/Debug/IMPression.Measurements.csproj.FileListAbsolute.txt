@@ -6,3 +6,13 @@ D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\bin\
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.csprojResolveAssemblyReference.cache
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.exe
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.pdb
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.Measurements.exe.config
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.Measurements.exe
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.Measurements.pdb
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.dll
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.pdb
+D:\Documents\GitHub\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.exe
+D:\Documents\GitHub\IMPression\IMPression.Measurements\obj\Debug\IMPression.Measurements.pdb
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.Parser.dll
+D:\Documents\GitHub\IMPression\IMPression.Measurements\bin\Debug\IMPression.Parser.pdb

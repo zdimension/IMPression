@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text.RegularExpressions;
-using Funcs = IMPression.MathFunctions;
 
 namespace IMPression
 {
@@ -13,11 +12,11 @@ namespace IMPression
     {
         private bool _ind;
 
-        public Complex(Complex b, ResultView view = ResultView.Auto) : this(b.Real, b.Imaginary, view, b._ind)
+        public Complex(Complex b) : this(b.Real, b.Imaginary, ResultView.Auto, b._ind)
         {
         }
 
-        public Complex(double real, double imaginary, ResultView view = ResultView.Auto, bool ind = false, string unit = "")
+        public Complex(Quad real, Quad imaginary, ResultView view = ResultView.Auto, bool ind = false, string unit = "")
         {
             Real = real;
             Imaginary = imaginary;
@@ -28,28 +27,28 @@ namespace IMPression
 
         public static Complex FromPolarCoordinates(Complex magnitude, Complex phase)
         {
-            return new Complex(magnitude * Funcs.Cos(phase), magnitude * Funcs.Sin(phase));
+            return new Complex((magnitude * Functions.Cos(phase)).Real, (magnitude * Functions.Sin(phase)).Real);
         }
 
         public static readonly Complex Zero = new Complex(0.0, 0.0);
         public static readonly Complex One = new Complex(1.0, 0.0);
         public static readonly Complex ImaginaryOne = new Complex(0.0, 1.0);
-        public static readonly Complex PositiveInfinity = new Complex(double.PositiveInfinity, double.PositiveInfinity);
-        public static readonly Complex NegativeInfinity = new Complex(double.NegativeInfinity, double.NegativeInfinity);
-        public static readonly Complex NaN = new Complex(double.NaN, double.NaN);
+        public static readonly Complex PositiveInfinity = new Complex(Quad.PositiveInfinity, Quad.PositiveInfinity);
+        public static readonly Complex NegativeInfinity = new Complex(Quad.NegativeInfinity, Quad.NegativeInfinity);
+        public static readonly Complex NaN = new Complex(Quad.NaN, Quad.NaN);
         public static readonly Complex Indeterminate = new Complex(0, 0, 0, true);
         public string Unit { get; }
 
-        public double Real { get; }
+        public Quad Real { get; }
 
-        public double Imaginary { get; }
+        public Quad Imaginary { get; }
 
         public ResultView ViewMode { get; set; }
 
-        public double Argument
-            => Imaginary == 0.0 && Real < 0.0 ? (double) Constant.Pi : (double) Funcs.ArcTan(Imaginary, Real);
+        public Quad Argument
+            => Imaginary == 0.0 && Real < 0.0 ? (Quad) Constants.Pi : (Quad) Functions.ArcTan(Imaginary / Real);
 
-        public double Module => Funcs.Sqrt((Real * Real) + (Imaginary * Imaginary));
+        public Quad Module => Functions.Sqrt((Real * Real) + (Imaginary * Imaginary));
 
         public Complex Conjugate => new Complex(Real, -Imaginary);
 
@@ -186,9 +185,9 @@ namespace IMPression
             return new Complex(dividend * divisor.Real / zmod, -dividend * divisor.Imaginary / zmod);
         }
 
-        public static Complex operator ^(Complex a, Complex b) => Funcs.Pow(a, b);
-        public static Complex operator ^(Complex a, double b) => Funcs.Pow(a, b);
-        public static Complex operator ^(double a, Complex b) => Funcs.Pow(a, b);
+        public static Complex operator ^(Complex a, Complex b) => Functions.Pow(a, b);
+        public static Complex operator ^(Complex a, double b) => Functions.Pow(a, b);
+        public static Complex operator ^(double a, Complex b) => Functions.Pow(a, b);
 
         public static Complex operator /(Complex dividend, double divisor)
         {
@@ -227,7 +226,7 @@ namespace IMPression
                 : new Complex(dividend.Real / (double) divisor, dividend.Imaginary / (double) divisor);
         }
 
-        public double MagnitudeSquared() => (Real * Real) + (Imaginary * Imaginary);
+        public Quad MagnitudeSquared() => (Real * Real) + (Imaginary * Imaginary);
 
         public bool IsZero()
         {
@@ -246,12 +245,12 @@ namespace IMPression
 
         public bool IsNaN()
         {
-            return double.IsNaN(Real) || double.IsNaN(Imaginary);
+            return Quad.IsNaN(Real) || Quad.IsNaN(Imaginary);
         }
 
         public bool IsInfinity()
         {
-            return double.IsInfinity(Real) || double.IsInfinity(Imaginary);
+            return Quad.IsInfinity(Real) || Quad.IsInfinity(Imaginary);
         }
 
         public bool IsReal()
@@ -290,12 +289,12 @@ namespace IMPression
 
         public static bool IsNaN(Complex c)
         {
-            return double.IsNaN(c.Real) || double.IsNaN(c.Imaginary);
+            return Quad.IsNaN(c.Real) || Quad.IsNaN(c.Imaginary);
         }
 
         public static bool IsInfinity(Complex c)
         {
-            return double.IsInfinity(c.Real) || double.IsInfinity(c.Imaginary);
+            return Quad.IsInfinity(c.Real) || Quad.IsInfinity(c.Imaginary);
         }
 
         public static bool IsReal(Complex c)
@@ -315,7 +314,7 @@ namespace IMPression
 
         #region IFormattable
 
-        internal static string int_Format(double d, string format, IFormatProvider prov, ResultView mode)
+        internal static string int_Format(Quad d, string format, IFormatProvider prov, ResultView mode)
         {
             if (mode == ResultView.Fraction)
             {
@@ -324,8 +323,8 @@ namespace IMPression
             else if (mode == ResultView.PrimeFactor)
             {
                 var fac = new List<long>();
-                long num = (int) Funcs.Truncate(d);
-                double surp = Funcs.Round(d - num, 15);
+                long num = (int) Functions.Truncate(d);
+                Quad surp = Functions.Round(d - num, 15);
                 if (num > 0)
                 {
                     while (num % 2 == 0)
@@ -354,7 +353,7 @@ namespace IMPression
                 pwl.All(x =>
                 {
                     var ct = fac.LongCount(y => y == x);
-                    pwlt.Add(x + (ct == 1 ? "" : EquationParser.Superscript(ct.ToString())));
+                    pwlt.Add(x + (ct == 1 ? "" : NumberHelper.Superscript(ct.ToString())));
                     return true;
                 });
 
@@ -362,30 +361,31 @@ namespace IMPression
             }
             else if (mode == ResultView.Scientific)
             {
-                string res = d.ToString("0.0##E+0");
+                string res = d.ToString(QuadrupleStringFormat.ScientificApproximate);
+                if (!res.Contains("E")) return res;
                 res = res.Replace("E", "*10");
                 string res1 = res.Substring(0, res.IndexOf("*10") + 3) +
-                              EquationParser.Superscript((d < 1 ? "-" : "") + res.Substring(res.IndexOf("*10") + 4));
+                              NumberHelper.Superscript((d < 1 ? "-" : "") + res.Substring(res.IndexOf("*10") + 4));
                 return res1;
             }
             else if (mode == ResultView.Hexadecimal)
             {
-                return "0x" + Convert.ToString((int) Funcs.Floor(d), 16) +
-                       (Funcs.Frac(d) != 0.0 ? " + " + Funcs.Frac(d) : "");
+                return "0x" + Convert.ToString((int) Functions.Floor(d), 16) +
+                       (Functions.Frac(d) != 0.0 ? " + " + Functions.Frac(d) : "");
             }
             else if (mode == ResultView.Binary)
             {
-                return "0b" + Convert.ToString((int) Funcs.Floor(d), 2) +
-                       (Funcs.Frac(d) != 0.0 ? " + " + Funcs.Frac(d) : "");
+                return "0b" + Convert.ToString((int) Functions.Floor(d), 2) +
+                       (Functions.Frac(d) != 0.0 ? " + " + Functions.Frac(d) : "");
             }
             else if (mode == ResultView.Octal)
             {
-                return "0o" + Convert.ToString((int) Funcs.Floor(d), 8) +
-                       (Funcs.Frac(d) != 0.0 ? " + " + Funcs.Frac(d) : "");
+                return "0o" + Convert.ToString((int) Functions.Floor(d), 8) +
+                       (Functions.Frac(d) != 0.0 ? " + " + Functions.Frac(d) : "");
             }
             else
             {
-                return d.ToString(format, prov);
+                return ((double)d).ToString(format, prov);
             }
         }
 
@@ -413,36 +413,36 @@ namespace IMPression
 
             if (IsReal())
                 return (ViewMode == ResultView.Auto)
-                    ? Constant.GetConstantName(Real, format, formatProvider)
+                    ? Constants.GetConstantName(Real, format, formatProvider)
                     : int_Format(Real, format, formatProvider, ViewMode);
 
 
             string realr = "";
             string imagr = "";
-            if (Funcs.Round(Real, 13) != 0)
+            if (Functions.Round(Real, 13) != 0)
                 realr += (ViewMode == ResultView.Auto)
-                    ? Constant.GetConstantName(Real, format, formatProvider, Imaginary != 0 ? 5 : -1)
-                    : int_Format((Imaginary != 0 ? (double) Funcs.Round(Real, 5) : Real), format, formatProvider,
+                    ? Constants.GetConstantName(Real, format, formatProvider, Imaginary != 0 ? 5 : -1)
+                    : int_Format((Imaginary != 0 ? (Quad)Functions.Round(Real, 5) : Real), format, formatProvider,
                         ViewMode);
             if (IsImaginary())
             {
-                if (Funcs.Abs(Imaginary) == 1.0)
+                if (Functions.Abs(Imaginary) == 1.0)
                 {
                     imagr += "i";
                 }
                 else
                 {
                     imagr += (ViewMode == ResultView.Auto)
-                        ? Constant.GetConstantName(Imaginary > 0 ? Imaginary : -Imaginary, format, formatProvider,
+                        ? Constants.GetConstantName(Imaginary > 0 ? Imaginary : -Imaginary, format, formatProvider,
                             Real != 0 ? 5 : -1) +
                           (Regex.IsMatch(
-                              Constant.GetConstantName(Imaginary > 0 ? Imaginary : -Imaginary, format, formatProvider,
+                              Constants.GetConstantName(Imaginary > 0 ? Imaginary : -Imaginary, format, formatProvider,
                                   Real != 0 ? 5 : -1), @"^[a-zA-Z]+$")
                               ? " * "
                               : "") + "i"
                         : int_Format(
                             (Real != 0
-                                ? (double) Funcs.Round(Imaginary > 0 ? Imaginary : -Imaginary, 5)
+                                ? (Quad)Functions.Round(Imaginary > 0 ? Imaginary : -Imaginary, 5)
                                 : (Imaginary > 0 ? Imaginary : -Imaginary)), format, formatProvider, ViewMode);
                 }
 
@@ -470,8 +470,8 @@ namespace IMPression
                 return true;
             }
 
-            return Funcs.Abs(Real - other.Real) < (10 * Funcs.Pow(2, -52)) &&
-                   Funcs.Abs(Imaginary - other.Imaginary) < (10 * Funcs.Pow(2, -52));
+            return Functions.Abs(Real - other.Real) < (10 * Functions.Pow(2, -52)) &&
+                   Functions.Abs(Imaginary - other.Imaginary) < (10 * Functions.Pow(2, -52));
         }
 
         public override int GetHashCode()
@@ -519,6 +519,16 @@ namespace IMPression
         public static implicit operator double(Complex value)
         {
             return value.Real;
+        }
+
+        public static implicit operator Quad(Complex value)
+        {
+            return value.Real;
+        }
+
+        public static implicit operator Complex(Quad value)
+        {
+            return new Complex(value, 0.0);
         }
 
         /*public static implicit operator int(Complex value)

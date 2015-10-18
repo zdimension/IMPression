@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.22823.1
+VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMPression", "IMPression\IMPression.csproj", "{ACDF942D-7AEC-4860-B6D5-3DE417688417}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMPression.Parser", "IMPression.Parser\IMPression.Parser.csproj", "{ACDF942D-7AEC-4860-B6D5-3DE417688417}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMPressive", "IMPressive\IMPressive.csproj", "{B60C8561-42A8-43CC-8647-1066C9ADDD04}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMPression.Measurements", "IMPression.Measurements\IMPression.Measurements.csproj", "{369AB98B-B0F2-4336-95DC-8D3F8349C297}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMPressive.Prompt", "IMPressive.Prompt\IMPressive.Prompt.csproj", "{A645A65A-8324-4F2B-87AD-BC256ACC39DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IMPression", "IMPression\IMPression.csproj", "{30FEB247-2F1F-437C-84E7-D35D6439735A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,14 @@ Global
 		{A645A65A-8324-4F2B-87AD-BC256ACC39DA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A645A65A-8324-4F2B-87AD-BC256ACC39DA}.Release|x64.ActiveCfg = Release|Any CPU
 		{A645A65A-8324-4F2B-87AD-BC256ACC39DA}.Release|x64.Build.0 = Release|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Debug|x64.Build.0 = Debug|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Release|x64.ActiveCfg = Release|Any CPU
+		{30FEB247-2F1F-437C-84E7-D35D6439735A}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

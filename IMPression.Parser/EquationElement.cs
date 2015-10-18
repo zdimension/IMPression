@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Text;
 
-namespace IMPression
+namespace IMPression.Parser
 {
     public abstract class EquationElement
     {

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using HelixToolkit.Wpf;
 using IMPression;
+using IMPression.Parser;
 
 namespace IMPressive
 {

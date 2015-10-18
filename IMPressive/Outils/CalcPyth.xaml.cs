@@ -3,6 +3,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using IMPression;
+using IMPression.Parser;
 
 namespace IMPressive.Outils
 {
@@ -67,15 +68,15 @@ namespace IMPressive.Outils
 
             if (tx1 == txtHyp)
             {
-                result = MathFunctions.Sqrt(tx1c.Square() - tx2c.Square());
+                result = Functions.Sqrt(tx1c.Square() - tx2c.Square());
             }
             else if (tx2 == txtHyp)
             {
-                result = MathFunctions.Sqrt(tx2c.Square() - tx1c.Square());
+                result = Functions.Sqrt(tx2c.Square() - tx1c.Square());
             }
             else
             {
-                result = MathFunctions.Sqrt(tx1c.Square() + tx2c.Square());
+                result = Functions.Sqrt(tx1c.Square() + tx2c.Square());
             }
 
             getinv(tx1, tx2).Text = result.ToString();

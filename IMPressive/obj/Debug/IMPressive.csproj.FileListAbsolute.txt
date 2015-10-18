@@ -78,9 +78,6 @@ D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Xps.dll
 D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\System.Windows.Controls.Input.Toolkit.dll
 D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\WPFToolkit.dll
 D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPression.pdb
-D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\HelixToolkit.Wpf.pdb
-D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\HelixToolkit.Wpf.xml
-D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\HtmlTextBlock.pdb
 D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.pdb
 D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.xml
 D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\OxyPlot.Wpf.pdb
@@ -130,3 +127,5 @@ D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.Properties.Resour
 D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.csproj.GenerateResource.Cache
 D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.exe.manifest
 D:\Documents\GitHub\IMPression\IMPressive\obj\Debug\IMPressive.application
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPression.Parser.dll
+D:\Documents\GitHub\IMPression\IMPressive\bin\Debug\IMPression.Parser.pdb

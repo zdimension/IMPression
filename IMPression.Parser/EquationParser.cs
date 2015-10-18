@@ -6,15 +6,19 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
-using Funcs = IMPression.MathFunctions;
 
 #endregion
 
-namespace IMPression
+namespace IMPression.Parser
 {
     public class EquationParser
     {
-        public static bool UseDegrees = false;
+        public static bool UseDegrees
+        {
+            get { return Functions.UseDegrees; }
+            set { Functions.UseDegrees = value; }
+        }
+
         private Term m_term = new Term();
         public static List<string> FunctionsList => Function.FunctionsList;
         public string Equation { get; private set; }
@@ -82,7 +86,7 @@ namespace IMPression
                 });
             }
             m_term.Parse(equation);
-            return Funcs.Round(m_term.Value, 15);
+            return Functions.Round(m_term.Value, 15);
         }
 
         public Complex Calculate(string eq, List<Var> vars)
@@ -93,8 +97,8 @@ namespace IMPression
         public Complex CalcForVar(string varname, double varvalue)
         {
             m_term.SetVar(varname, varvalue);
-            return new Complex(Funcs.Abs(m_term.Value.Real) < Funcs.Pow(10, -15) ? 0 : m_term.Value.Real,
-                Funcs.Abs(m_term.Value.Imaginary) < Funcs.Pow(10, -15) ? 0 : m_term.Value.Imaginary);
+            return new Complex(Functions.Abs(m_term.Value.Real) < Functions.Pow(10, -15) ? 0 : m_term.Value.Real,
+                Functions.Abs(m_term.Value.Imaginary) < Functions.Pow(10, -15) ? 0 : m_term.Value.Imaginary);
         }
 
         public string CleanUp(string expr, bool vis = false)

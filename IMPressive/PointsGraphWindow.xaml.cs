@@ -5,6 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
 using IMPression;
+using IMPression.Parser;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
@@ -113,12 +114,12 @@ namespace IMPressive
 
         private double Fx()
         {
-            return MathFunctions.Round(parser.Calculate(parser.DeCleanUp(txtX.Text)), 15);
+            return Functions.Round(parser.Calculate(parser.DeCleanUp(txtX.Text)), 15);
         }
 
         private double Fy()
         {
-            return MathFunctions.Round(parser.Calculate(parser.DeCleanUp(txtY.Text)), 15);
+            return Functions.Round(parser.Calculate(parser.DeCleanUp(txtY.Text)), 15);
         }
 
         private void btnLoad_Click(object sender, RoutedEventArgs e)

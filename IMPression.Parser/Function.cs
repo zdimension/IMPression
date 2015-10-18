@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Reflection;
 using System.Text;
 
-namespace IMPression
+namespace IMPression.Parser
 {
     public class Function : EquationValue
     {
@@ -72,44 +73,55 @@ namespace IMPression
             FunctionsNone = new Dictionary<string, FunctionCallbackNone>(StringComparer.OrdinalIgnoreCase);
 
             var funcs =
-                typeof (MathFunctions).GetMethods(BindingFlags.Public |
+                typeof (Functions).GetMethods(BindingFlags.Public |
                                                   BindingFlags.Static);
-            foreach (var x in funcs)
+            var ln = "";
+            try
             {
-                if (Attribute.IsDefined(x, typeof (MathFunc)))
-                    if ((Attribute.GetCustomAttribute(x, typeof (MathFunc)) as MathFunc).Hide) continue;
-                var n = x.Name;
-                if (Attribute.IsDefined(x, typeof (MathFunc)))
-                    if ((Attribute.GetCustomAttribute(x, typeof (MathFunc)) as MathFunc).Name != "")
-                        n = (Attribute.GetCustomAttribute(x, typeof (MathFunc)) as MathFunc).Name;
-                switch (x.GetParameters().Count())
+                foreach (var x in funcs)
                 {
-                    case 0:
-                        FunctionsNone.Add(n,
-                            (FunctionCallbackNone) Delegate.CreateDelegate(typeof (FunctionCallbackNone), x));
-                        break;
-                    case 1:
-                        if (Attribute.IsDefined(x.GetParameters()[0], typeof (ParamArrayAttribute)))
-                            FunctionsInf.Add(n,
-                                (FunctionCallbackInf) Delegate.CreateDelegate(typeof (FunctionCallbackInf), x));
-                        else Functions.Add(n, (FunctionCallback) Delegate.CreateDelegate(typeof (FunctionCallback), x));
-                        break;
-                    case 2:
-                        Functions2.Add(n, (FunctionCallback2) Delegate.CreateDelegate(typeof (FunctionCallback2), x));
-                        break;
-                    case 3:
-                        Functions3.Add(n, (FunctionCallback3) Delegate.CreateDelegate(typeof (FunctionCallback3), x));
-                        break;
-                    case 4:
-                        Functions4.Add(n, (FunctionCallback4) Delegate.CreateDelegate(typeof (FunctionCallback4), x));
-                        break;
-                    /*case 5:
+                    if (Attribute.IsDefined(x, typeof (MathFunc)))
+                        if ((Attribute.GetCustomAttribute(x, typeof (MathFunc)) as MathFunc).Hide) continue;
+                    var n = x.Name;
+                    ln = n;
+                    if (Attribute.IsDefined(x, typeof (MathFunc)))
+                        if ((Attribute.GetCustomAttribute(x, typeof (MathFunc)) as MathFunc).Name != "")
+                            n = (Attribute.GetCustomAttribute(x, typeof (MathFunc)) as MathFunc).Name;
+                    switch (x.GetParameters().Count())
+                    {
+                        case 0:
+                            FunctionsNone.Add(n,
+                                (FunctionCallbackNone) Delegate.CreateDelegate(typeof (FunctionCallbackNone), x));
+                            break;
+                        case 1:
+                            if (Attribute.IsDefined(x.GetParameters()[0], typeof (ParamArrayAttribute)))
+                                FunctionsInf.Add(n,
+                                    (FunctionCallbackInf) Delegate.CreateDelegate(typeof (FunctionCallbackInf), x));
+                            else
+                                Functions.Add(n,
+                                    (FunctionCallback) Delegate.CreateDelegate(typeof (FunctionCallback), x));
+                            break;
+                        case 2:
+                            Functions2.Add(n, (FunctionCallback2) Delegate.CreateDelegate(typeof (FunctionCallback2), x));
+                            break;
+                        case 3:
+                            Functions3.Add(n, (FunctionCallback3) Delegate.CreateDelegate(typeof (FunctionCallback3), x));
+                            break;
+                        case 4:
+                            Functions4.Add(n, (FunctionCallback4) Delegate.CreateDelegate(typeof (FunctionCallback4), x));
+                            break;
+                        /*case 5:
                         del = typeof(FunctionCallback5);     FUTURE
                         break;*/
-                    case 6:
-                        Functions6.Add(n, (FunctionCallback6) Delegate.CreateDelegate(typeof (FunctionCallback6), x));
-                        break;
+                        case 6:
+                            Functions6.Add(n, (FunctionCallback6) Delegate.CreateDelegate(typeof (FunctionCallback6), x));
+                            break;
+                    }
                 }
+            }
+            catch
+            {
+                throw new Exception(ln);
             }
 
 

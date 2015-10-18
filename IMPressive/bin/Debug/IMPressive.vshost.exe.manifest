@@ -49,8 +49,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>LCRybyN9brgri956B3K4kmseHbo=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DYAQMh8+CYlfPBsk6iurgquab1eqRyau0/CNb2CUZZw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -61,32 +61,44 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>jz+ABjq6noFqqkpKpXPdjS5JEMY=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>EPG47OwOYTgP+CYHcMytS/PihOKLlFFKk54eD+oLNc8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPression.dll" size="147968">
-      <assemblyIdentity name="IMPression" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPression.dll" size="152576">
+      <assemblyIdentity name="IMPression" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>r85G6+rG2QJA3DbPITQ1YBzkOyA=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>WLfUeMPkyBJVstY24+uGCM5jxQD6mA61JH9iNfTUheg=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPressive.exe" size="380280">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPression.Parser.dll" size="39424">
+      <assemblyIdentity name="IMPression.Parser" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>jsY62045oSf95UR1lZbnCtfJRABH+CwJemnsZNB7a1M=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPressive.exe" size="380792">
       <assemblyIdentity name="IMPressive" version="3.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>EesCSSJzkWPaQwpVQhS1MkIBpn0=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>M3HIGcgxpguhF4mfR22fcm/b2ENQvpvPyVF4+xCHKwM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -97,8 +109,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>1Nkd/RwKHhI2FI7GWS+TQ5QBOyM=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>XYs7Cg674gtBE4ssYjvENJPZyuoe8NunVMbuyHgCK7k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -109,8 +121,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>y03gFH23/CMwFquCg03dBMN+pnU=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>15Irwbcbx4JsoFt6AYGFC8qsONjLFOOzXb44P61j98Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -121,8 +133,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>BD1G7vvHHuuOqb9DneFkyh8AJwQ=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>dXXYMYiVglbJQPawSKLTYQpCNVJfAMhJwbkZxGVgnEk=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,8 +145,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pNDcTwnOhKM/GqPgxctK4TH5+ww=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>vDp4603y/Vs5JE+gWGzAqC/j0OGF0VHmw0DFMHKmGHI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -145,8 +157,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>AaJQYxOXyTxKq5p3eobjn9jYTwk=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>rvn8u4dPyC4VHjInkzAGH48ip3wF9YOgy15WlmVKxFY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -157,8 +169,8 @@
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
-        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>pHANeuti3Jg230jtwkMlYCPNcik=</dsig:DigestValue>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>DvUJ50ct2/D9/0aMxeughpFxfsLZUSTwlVg+w/O7n/Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -167,8 +179,8 @@
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>5sYK60/CuE4JN21wjDRf7TLIosk=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>9xT4+YIYoHVZjXv+vVBQl+WWPLDmR7mED/XgXxZcxVQ=</dsig:DigestValue>
     </hash>
   </file>
   <file name="IMPressive.exe.config" size="1022">
@@ -176,8 +188,8 @@
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>hftS1bqy9LS4r9Bl0UAP3RYKtLU=</dsig:DigestValue>
+      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+      <dsig:DigestValue>tWJqA6owMQVI78Fc3ucWGyLKi59XRpIdXq82lzousGs=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

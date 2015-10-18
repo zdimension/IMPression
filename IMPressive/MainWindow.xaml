@@ -4,10 +4,10 @@
 	xmlns:controls="clr-namespace:System.Windows.Controls;assembly=System.Windows.Controls.Input.Toolkit"
 	xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
 	x:Class="IMPressive.MainWindow"
-	Title="IMPressive" Height="489" Width="686" SnapsToDevicePixels="True" ResizeMode="CanMinimize" Icon="icon.ico"
-	MouseWheel="Window_MouseWheel" Loaded="Window_Loaded">
+	Title="IMPressive" SnapsToDevicePixels="True" ResizeMode="CanMinimize" Icon="icon.ico"
+	MouseWheel="Window_MouseWheel" Loaded="Window_Loaded" SizeToContent="WidthAndHeight">
 
-	<Grid Style="{DynamicResource MainGrid}">
+	<Grid Style="{DynamicResource MainGrid}" Width="680" Height="460">
 		<Border BorderThickness="1" Margin="24,42,24,282" Padding="5" BorderBrush="#FF8696AA" CornerRadius="2" Height="26"
 		        Background="White" Width="614" SnapsToDevicePixels="False" HorizontalAlignment="Center"
 		        VerticalAlignment="Top">

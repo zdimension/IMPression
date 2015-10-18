@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using IMPression;
+using IMPression.Parser;
 using IMPressive.Properties;
 
 namespace IMPressive

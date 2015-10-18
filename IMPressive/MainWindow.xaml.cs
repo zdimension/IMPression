@@ -10,6 +10,7 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using IMPression;
+using IMPression.Parser;
 using IMPressive.Outils;
 using IMPressive.Properties;
 using Xceed.Wpf.Toolkit;

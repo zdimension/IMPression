@@ -6,3 +6,14 @@ d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\obj\Debug\I
 d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.dll
 d:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.pdb
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPression.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Documents\GitHub\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.dll
+D:\Documents\GitHub\IMPression\IMPression.Tests\obj\Debug\IMPression.Tests.pdb
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\IMPression.Tests.dll
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\IMPression.Tests.pdb
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\IMPression.dll
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\IMPression.Parser.dll
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\IMPression.Parser.pdb
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\IMPression.pdb
+D:\Documents\GitHub\IMPression\IMPression.Tests\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll

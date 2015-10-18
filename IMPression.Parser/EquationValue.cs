@@ -1,4 +1,4 @@
-﻿namespace IMPression
+﻿namespace IMPression.Parser
 {
     public abstract class EquationValue : EquationElement
     {
@@ -11,7 +11,7 @@
             set { _value = value;
                 if(_value < 0)
                 {
-                    _value = MathFunctions.Abs(_value);
+                    _value = Functions.Abs(_value);
                     m_signed = true;
                 }
                 else
@@ -36,7 +36,7 @@
                 }
                 if (!m_signed && Value < 0)
                 {
-                    _value = MathFunctions.Abs(_value);
+                    _value = Functions.Abs(_value);
                 }
             }
         }

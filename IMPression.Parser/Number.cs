@@ -3,7 +3,7 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 
-namespace IMPression
+namespace IMPression.Parser
 {
     internal class Number : EquationValue
     {
@@ -12,7 +12,7 @@ namespace IMPression
             var number = GetNumber(src, start);
             if (number.Length > 0)
                 m_sb.Append(number);
-            double result;
+            Quad result;
             if (number.StartsWith("0x"))
             {
                 try
@@ -55,9 +55,24 @@ namespace IMPression
             var val = m_sb.ToString();
             var invarSeperator = CultureInfo.InvariantCulture.NumberFormat.NumberDecimalSeparator;
             val = val.Replace(",", invarSeperator);
-            if (double.TryParse(val, NumberStyles.Float, CultureInfo.InvariantCulture, out result) == false)
-                throw new ParseException(src, start, $"Impossible de convertir '{val}' en nombre à virgule");
-            Value = result;
+            if(val.Contains('e') || val.Contains('E'))
+            {
+                double resultdouble = 0;
+                if (double.TryParse(val, NumberStyles.Float, CultureInfo.InvariantCulture, out resultdouble) == false)
+                    throw new ParseException(src, start, $"Impossible de convertir '{val}' en nombre à virgule");
+                Value = resultdouble;
+            }
+            else
+            {
+                try
+                {
+                    Value = Quad.Parse(val);
+                }
+                catch
+                {
+                    throw new ParseException(src, start, $"Impossible de convertir '{val}' en nombre à virgule");
+                }
+            }
         }
 
         public static string GetNumber(string equation, int index)

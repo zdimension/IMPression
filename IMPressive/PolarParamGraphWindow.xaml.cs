@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using IMPression;
+using IMPression.Parser;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;
@@ -82,8 +83,8 @@ namespace IMPressive
             txtOpY.Text = parser.CleanUp(txtOpY.Text);
             try
             {
-                GraphModel.Series.Add(new FunctionSeries(x => Fx(x) * MathFunctions.Cos(x),
-                    y => Fy(y) * MathFunctions.Sin(y), parser.Calculate(txtFromT.Text), parser.Calculate(txtToT.Text),
+                GraphModel.Series.Add(new FunctionSeries(x => Fx(x) * Functions.Cos(x),
+                    y => Fy(y) * Functions.Sin(y), parser.Calculate(txtFromT.Text), parser.Calculate(txtToT.Text),
                     parser.Calculate(txtPasT.Text), txtOpX.Text + " ; " + txtOpY.Text));
                 chartCanvas.InvalidatePlot();
             }

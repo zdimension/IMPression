@@ -1,4 +1,4 @@
-namespace IMPression
+namespace IMPression.Parser
 {
     internal class Variable : EquationValue
     {

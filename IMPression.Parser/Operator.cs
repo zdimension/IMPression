@@ -2,7 +2,7 @@ using System;
 using System.Linq;
 using System.Text;
 
-namespace IMPression
+namespace IMPression.Parser
 {
     internal class Operator : EquationElement
     {
@@ -78,11 +78,11 @@ namespace IMPression
                     }
                     return left / right;
                 case "\\":
-                    return MathFunctions.Floor(left / right);
+                    return Functions.Floor(left / right);
                 case "^":
-                    return MathFunctions.Pow(left, right);
+                    return Functions.Pow(left, right);
                 case "%":
-                    return left - right * MathFunctions.Floor(left / right);
+                    return left - right * Functions.Floor(left / right);
                 case "&":
                     return (int) left & (int) right;
                 case "|":

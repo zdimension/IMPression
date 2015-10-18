@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using IMPression;
+using IMPression.Parser;
 
 namespace IMPressive.Prompt
 {
@@ -531,7 +532,7 @@ namespace IMPressive.Prompt
 
             if (h == "")
             {
-                var fc = typeof(MathFunctions).GetMethods().FirstOrDefault(x => n.StartsWith(x.Name.ToLower()));
+                var fc = typeof(Functions).GetMethods().FirstOrDefault(x => n.StartsWith(x.Name.ToLower()));
                 if (Attribute.IsDefined(fc, typeof(MathFunc)))
                 {
                     h = (Attribute.GetCustomAttribute(fc, typeof(MathFunc)) as MathFunc).Description;
@@ -544,7 +545,7 @@ namespace IMPressive.Prompt
 
             if(!n.Contains("("))
             {
-                if(typeof(MathFunctions).GetMethods().Select(x => x.Name.ToLower()).Any(x => x.Contains(n.ToLower())))
+                if(typeof(Functions).GetMethods().Select(x => x.Name.ToLower()).Any(x => x.Contains(n.ToLower())))
                 {
                     n = Function.FunctionsList.First(x => (x.Contains('(') ? x.ToLower().Substring(0, x.IndexOf('(')) : x.ToLower()) == n.ToLower());
                 }

@@ -8,6 +8,7 @@ using System.Windows.Media;
 using System.Windows.Media.Media3D;
 using HelixToolkit.Wpf;
 using IMPression;
+using IMPression.Parser;
 
 namespace IMPressive
 {
@@ -296,7 +297,7 @@ namespace IMPressive
             if (ColorValues != null) minColorValue = ColorValues.OfType<double>().Min(x => x);
             if (ColorValues != null) maxColorValue = ColorValues.OfType<double>().Max(x => x);
 
-            if (MathFunctions.Abs(minColorValue) < MathFunctions.Abs(maxColorValue))
+            if (Functions.Abs(minColorValue) < Functions.Abs(maxColorValue))
                 minColorValue = -maxColorValue;
             else
                 maxColorValue = -minColorValue;

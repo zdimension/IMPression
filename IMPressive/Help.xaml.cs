@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using IMPression;
+using IMPression.Parser;
 
 namespace IMPressive
 {
@@ -240,7 +241,7 @@ namespace IMPressive
                 case "sqrt":
                     sp = "x ≥ 0";
                     h =
-                        "Calcule la [b]racine carrée[/b] de [x]a[/x].\nLa racine carrée de [x]x[/x] est le nombre qui multiplié par lui-même donne [x]x[/x].\n\n[b]Attention :[/b] La racine carrée de -1 n'est pas définie. On la note [m]i[/m]. Les racines carrées de nombres négatifs sont dont calculées à partir de [m]i[/m] ([m]√(2) ≈ 1,414; √(-2) ≈ 1,414 × i[/m]).";
+                        "Calcule la [b]racine carrée[/b] de [x]a[/x].\nLa racine carrée de [x]x[/x] est le nombre qui multiplié par lui-même donne [x]x[/x].\n\n[b]Attention :[/b] La racine carrée de -1 n'est pas définie sur le plan réel. On la note [m]i[/m] et elle est la base des nombres complexes. Les racines carrées de nombres négatifs sont dont calculées à partir de [m]i[/m] ([m]√(2) ≈ 1,414; √(-2) ≈ 1,414 × i[/m]).";
                     break;
                 case "curt":
                     h =
@@ -408,7 +409,7 @@ namespace IMPressive
             //if (h == "") h = "[i]Pas d'aide disponible[/i]";
             if (h == "")
             {
-                var fc = typeof (MathFunctions).GetMethods().FirstOrDefault(x => n.StartsWith(x.Name.ToLower()));
+                var fc = typeof (Functions).GetMethods().FirstOrDefault(x => n.StartsWith(x.Name.ToLower()));
                 if (Attribute.IsDefined(fc, typeof (MathFunc)))
                 {
                     h = (Attribute.GetCustomAttribute(fc, typeof (MathFunc)) as MathFunc).Description;

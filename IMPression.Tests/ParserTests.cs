@@ -1,7 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
+using IMPression.Geometry.Shapes;
+using IMPression.Parser;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Fs = IMPression.MathFunctions;
 
 namespace IMPression.Tests
 {
@@ -10,16 +11,21 @@ namespace IMPression.Tests
     {
         EquationParser p = new EquationParser();
 
-        
+        [TestMethod]
+        public void GeometryFunctions()
+        {
+            Assert.AreEqual(93, Math.Truncate(new Triangle(12, 34, 45).Surface()));
+            Assert.IsTrue(new Triangle(3, 4, 5).IsRight);
+        }
 
         [TestMethod]
         public void IntegerFunctions()
         {
-            Assert.AreEqual(5, Fs.Abs(5));
-            Assert.AreEqual(0.8, Fs.Abs(-0.8));
+            Assert.AreEqual(5, Functions.Abs(5));
+            Assert.AreEqual(0.8, Functions.Abs(-0.8));
         
-            Assert.AreEqual(120, Fs.Fact(5));
-            Assert.AreEqual(287.885, Fs.Round(Fs.Fact(5.5), 3));
+            Assert.AreEqual(120, Functions.Fact(5));
+            Assert.AreEqual(287.885, Functions.Round(Functions.Fact(5.5), 3));
             Assert.AreEqual(24, p.Calculate("fact(4)"));
             try
             {

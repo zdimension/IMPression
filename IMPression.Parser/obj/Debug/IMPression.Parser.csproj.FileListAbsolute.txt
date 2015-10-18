@@ -1,0 +1,9 @@
+D:\Documents\GitHub\IMPression\IMPression.Parser\bin\Debug\IMPression.dll
+D:\Documents\GitHub\IMPression\IMPression.Parser\bin\Debug\IMPression.pdb
+D:\Documents\GitHub\IMPression\IMPression.Parser\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+D:\Documents\GitHub\IMPression\IMPression.Parser\bin\Debug\fr\Microsoft.VisualStudio.QualityTools.UnitTestFramework.resources.dll
+D:\Documents\GitHub\IMPression\IMPression.Parser\obj\Debug\IMPression.Parser.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\IMPression\IMPression.Parser\bin\Debug\IMPression.Parser.dll
+D:\Documents\GitHub\IMPression\IMPression.Parser\bin\Debug\IMPression.Parser.pdb
+D:\Documents\GitHub\IMPression\IMPression.Parser\obj\Debug\IMPression.Parser.dll
+D:\Documents\GitHub\IMPression\IMPression.Parser\obj\Debug\IMPression.Parser.pdb

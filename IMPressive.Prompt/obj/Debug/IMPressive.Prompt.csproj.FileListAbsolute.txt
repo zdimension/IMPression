@@ -6,3 +6,13 @@ D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\bin\Debug\
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.csprojResolveAssemblyReference.cache
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.exe
 D:\Documents\Visual Studio 2013\Projects\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.pdb
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPressive.Prompt.exe.config
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPressive.Prompt.exe
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPressive.Prompt.pdb
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPression.dll
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPression.pdb
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.csprojResolveAssemblyReference.cache
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.exe
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\obj\Debug\IMPressive.Prompt.pdb
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPression.Parser.dll
+D:\Documents\GitHub\IMPression\IMPressive.Prompt\bin\Debug\IMPression.Parser.pdb

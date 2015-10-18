@@ -4,6 +4,7 @@ using System.Linq;
 using System.Windows;
 using System.Windows.Input;
 using IMPression;
+using IMPression.Parser;
 using OxyPlot;
 using OxyPlot.Axes;
 using OxyPlot.Series;

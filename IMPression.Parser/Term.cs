@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace IMPression
+namespace IMPression.Parser
 {
     internal class Term : EquationValue
     {
