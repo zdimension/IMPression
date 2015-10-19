@@ -67,14 +67,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPression.dll" size="152576">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="IMPression.dll" size="167424">
       <assemblyIdentity name="IMPression" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>WLfUeMPkyBJVstY24+uGCM5jxQD6mA61JH9iNfTUheg=</dsig:DigestValue>
+        <dsig:DigestValue>CUTEYCTX4ctXoUmYNIG9OeGzQJS9mzydw2I82NN1jdI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -86,7 +86,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>jsY62045oSf95UR1lZbnCtfJRABH+CwJemnsZNB7a1M=</dsig:DigestValue>
+        <dsig:DigestValue>3qzfeCXYbuSYh/5dpr2sBsYzsw2yYPWQZIII2s50iC4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -98,7 +98,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>M3HIGcgxpguhF4mfR22fcm/b2ENQvpvPyVF4+xCHKwM=</dsig:DigestValue>
+        <dsig:DigestValue>6uqYqM2ICLvokG2kT+wa8us5re0khY82zG4WDeoF7Z4=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -16,13 +16,16 @@ namespace IMPression
         {
         }
 
-        public Complex(Quad real, Quad imaginary, ResultView view = ResultView.Auto, bool ind = false, string unit = "")
+        private bool usej;
+
+        public Complex(Quad real, Quad imaginary, ResultView view = ResultView.Auto, bool ind = false, string unit = "", bool usejinsteadofi = false)
         {
             Real = real;
             Imaginary = imaginary;
             ViewMode = view;
             _ind = ind;
             Unit = unit;
+            usej = usejinsteadofi;
         }
 
         public static Complex FromPolarCoordinates(Complex magnitude, Complex phase)
@@ -409,7 +412,7 @@ namespace IMPression
             if (_ind) return "Indéterminé";
 
             if (IsZero()) return "0";
-            if (IsImaginaryOne()) return "i";
+            if (IsImaginaryOne()) return (usej ? "j" : "i");
 
             if (IsReal())
                 return (ViewMode == ResultView.Auto)
@@ -428,7 +431,7 @@ namespace IMPression
             {
                 if (Functions.Abs(Imaginary) == 1.0)
                 {
-                    imagr += "i";
+                    imagr += (usej ? "j" : "i");
                 }
                 else
                 {
@@ -439,7 +442,7 @@ namespace IMPression
                               Constants.GetConstantName(Imaginary > 0 ? Imaginary : -Imaginary, format, formatProvider,
                                   Real != 0 ? 5 : -1), @"^[a-zA-Z]+$")
                               ? " * "
-                              : "") + "i"
+                              : "") + (usej ? "j" : "i")
                         : int_Format(
                             (Real != 0
                                 ? (Quad)Functions.Round(Imaginary > 0 ? Imaginary : -Imaginary, 5)

@@ -3307,23 +3307,21 @@ namespace IMPression
             return x < 0.0 ? -ans : ans;
         }
 
-        public static Complex BesselI(Complex n, Complex z)
+        public static Complex BesselI(Complex nu, Complex z)
         {
-            //if (nu < 0) nu = -nu;
-            /*if (Math.Truncate(nu) != nu) throw new ParseException("", 0, "nu doit être entier.");*/
-            //int n = (int)Math.Truncate(nu);
-            /*
+            int n = (int)Math.Truncate(nu);
+            
 			if (n < 0)
-				throw new ParseException("", 0, "n doit être positif.");
+				throw new MathException("", 0, "n doit être positif.");
 			else if (n == 0)
-				return BesselI0(x);
+				return BesselI0(z);
 			else if (n == 1)
-				return BesselI(x);
+				return BesselI(z);
 
-			if (x == 0.0)
+			if (z == 0.0)
 				return 0.0;
 
-			*/
+			
             var ACC = 40.0;
             var BIGNO = 1.0e+10;
             var BIGNI = 1.0e-10;
@@ -3351,26 +3349,6 @@ namespace IMPression
 
             ans *= BesselI0(z) / bi;
             return z < 0.0 && n % 2 == 1 ? -ans : ans;
-
-            /*double x = 0;
-			double k = 0;
-
-			while (true)
-			{
-
-				double nw = (1 / (Gamma(k + nu + 1) * Fact(k))) * Pow(z / 2, 2 * k + nu);
-				if (Math.Round(x + nw, 15) == Math.Round(x, 15))
-				{
-					break;
-				}
-				x += nw;
-
-
-
-				k++;
-			}
-
-			return x;*/
         }
 
         private static void airy(double x,
